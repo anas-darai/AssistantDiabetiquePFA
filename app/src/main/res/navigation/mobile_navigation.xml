@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_accueil">
+
+    <fragment
+        android:id="@+id/nav_accueil"
+        android:name="com.anasdarai.assistant_diabtique.fragments.HomeFragment"
+        android:label="@string/menu_accueil"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gtaches"
+        android:name="com.anasdarai.assistant_diabtique.fragments.GTachesFragment"
+        android:label="@string/menu_gtaches"
+        tools:layout="@layout/fragment_gtaches" />
+
+    <fragment
+        android:id="@+id/nav_repas"
+        android:name="com.anasdarai.assistant_diabtique.fragments.RepasFragment"
+        android:label="@string/menu_repas"
+        tools:layout="@layout/fragment_repas" />
+
+    <fragment
+        android:id="@+id/nav_mesures"
+        android:name="com.anasdarai.assistant_diabtique.fragments.MesuresFragment"
+        android:label="Mesures"
+        tools:layout="@layout/fragment_mesures" />
+    <fragment
+        android:id="@+id/nav_conseils"
+        android:name="com.anasdarai.assistant_diabtique.fragments.ConseilsFragment"
+        android:label="Conseils"
+        tools:layout="@layout/fragment_conseils" />
+
+
+    <fragment
+        android:id="@+id/nav_stat"
+        android:name="com.anasdarai.assistant_diabtique.fragments.StatistiquesFragment"
+        android:label="Statistiques"
+        tools:layout="@layout/fragment_statistiques" />
+    <fragment
+        android:id="@+id/nav_reglages"
+        android:name="com.anasdarai.assistant_diabtique.fragments.ReglagesFragment"
+        android:label="Réglages"/>
+
+    <fragment
+        android:id="@+id/nav_export"
+        android:name="com.anasdarai.assistant_diabtique.fragments.ExporterFragment"
+        android:label="Exporter"/>
+
+
+
+</navigation>

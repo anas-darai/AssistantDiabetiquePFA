@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_accueil"
+            android:icon="@drawable/ic_baseline_home"
+            android:title="@string/menu_accueil" />
+        <item
+            android:id="@+id/nav_gtaches"
+            android:icon="@drawable/ic_baseline_task"
+            android:title="@string/menu_gtaches" />
+        <item
+            android:id="@+id/nav_repas"
+            android:icon="@drawable/ic_repas"
+            android:title="@string/menu_repas" />
+        <item
+            android:id="@+id/nav_mesures"
+            android:icon="@drawable/ic_mesure"
+                android:title="Mesures" />
+
+    </group>
+    <group android:id="@+id/gcon">
+        <item
+            android:id="@+id/nav_conseils"
+            android:icon="@drawable/ic_baseline_advice"
+            android:title="Conseils"/>
+
+    </group>
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_stat"
+            android:icon="@drawable/ic_analytics"
+            android:title="Statistiques" />
+        <item
+            android:id="@+id/nav_export"
+            android:icon="@drawable/ic_baseline_export"
+            android:title="Exporter"/>
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_reglages"
+            android:icon="@drawable/ic_baseline_settings"
+            android:title="Réglages"/>
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_baseline_share"
+            android:title="Partager l'application"/>
+    </group>
+</menu>

@@ -1,0 +1,100 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <PreferenceCategory app:title="Informations personnelles"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            app:key="nom_prenom"
+            app:title="Nom et prénom"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:entries="@array/diabete_types"
+            app:entryValues="@array/diabete_types_values"
+            app:key="type_biabete"
+            app:title="Type de diabète"
+            app:defaultValue="1"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="urgence"
+            app:title="Informations d'assistance"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Compensation d'insuline"
+        app:iconSpaceReserved="false"
+        app:key="insuline"
+        >
+
+        <EditTextPreference
+            android:inputType="number"
+            android:defaultValue="2"
+            android:key="FSI"
+            android:singleLine="true"
+            app:dialogMessage="Si votre FSI = 1, cela veut dire que 1U d’insuline diminuera votre taux glycémique de 18 mg/dl."
+            android:title="Le facteur de sensibilité à l'insuline"
+            app:useSimpleSummaryProvider="true"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Taux de glycémie"
+        app:iconSpaceReserved="false"
+        app:key="catft"
+        app:summary="Pour des valeurs plus précises, contactez votre médecin">
+
+        <EditTextPreference
+            android:inputType="number"
+
+            android:defaultValue="75"
+            android:key="taux_glycemie_inf"
+            android:singleLine="true"
+            android:title="Le taux inférieur"
+            app:useSimpleSummaryProvider="true"
+            />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:defaultValue="100"
+            android:key="taux_glycemie_nor"
+            android:singleLine="true"
+            android:title="Le taux normal"
+            app:useSimpleSummaryProvider="true"
+            />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:defaultValue="180"
+            android:key="taux_glycemie_sup"
+            android:singleLine="true"
+            android:title="Le taux supérieur"
+            app:useSimpleSummaryProvider="true"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Notifications"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="notf_taches_per"
+            app:title="Les notifications de tâches permanentes"
+            app:summaryOn="Les notifications sont activées"
+            app:summaryOff="Les notifications sont désactivées"
+            app:defaultValue="true"
+            app:singleLineTitle="false"/>
+
+        <SwitchPreferenceCompat
+            app:singleLineTitle="false"
+            app:key="notf_taches_exp"
+            app:summaryOn="Les notifications sont activées"
+            app:summaryOff="Les notifications sont désactivées"
+            app:title="Les notifications de tâches exceptionnelles"
+            app:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
